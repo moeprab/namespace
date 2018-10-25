@@ -11,30 +11,25 @@ var MOEPRAB = {
 
     init: function () {
 
-        let newBox = document.createElement("section");
-        MOEPRAB.className = "box";
-        MOEPRAB.textContent = "MOEPRAB";
+        let newBox = document.createElement("div");
+        newBox.className = "box";
+        newBox.textContent = "MOEPRAB";
 
         let boxes = document.getElementById("boxes");
         boxes.appendChild(newBox);
 
-        newBox.addEventListener("click", mouseClick);
-        newBox.addEventListener("mouseover", mouseOver);
-        newBox.addEventListener("mouseout", mouseOut);
+        div.addEventListener("click", function () {
+            div.style.borderColor = "#12e2a3";
+            div.style.backgroundColor = "#ddf516";
+        });
+
+        div.addEventListener("mouseover", function () {
+            div.classList.toggle("highlight");
+        });
+
+        div.addEventListener("mouseout", function () {
+            div.classList.toggle("highlight");
+            div.removeAttribute("style");
+        });
     }
-
-}
-
-function mouseClick() {
-    this.style.borderColor = "#12e2a3";
-    this.style.backgroundColor = "#ddf516";
-}
-
-function mouseOver(e) {
-    e.target.classList.toggle("highlight");
-}
-
-function mouseOut(e) {
-    e.target.classList.toggle("highlight");
-    e.target.removeAttribute('style');
-}
+};
