@@ -16,40 +16,40 @@ var MOEPRAB = {
         let boxes = document.getElementById("boxes");
         boxes.appendChild(newBox);
 
-        newBox.addEventListener("click", mouseClick);
-        newBox.addEventListener("mouseover", mouseOver);
-        newBox.addEventListener("mouseout", mouseOut);
-
-    }
-}
-
-function mousClick() {
-    this.style.borderColor = "#12e2a3";
-    this.style.backgroundColor = "#ddf516";
-}
-
-function mouseOver() {
-    this.classList.toggle("highlight");
-}
-
-function mouseOut() {
-    this.classList.toggle("highlight");
-    this.removeAttribute("style");
-}
-
-//div.addEventListener("click", function () {
-//    div.style.borderColor = "#12e2a3";
-//    div.style.backgroundColor = "#ddf516";
-//});
+//        newBox.addEventListener("click", mouseClick);
+//        newBox.addEventListener("mouseover", mouseOver);
+//        newBox.addEventListener("mouseout", mouseOut);
 //
-//div.addEventListener("mouseover", function () {
-//    div.classList.toggle("highlight");
-//});
-//
-//div.addEventListener("mouseout", function () {
-//    div.classList.toggle("highlight");
-//    div.removeAttribute("style");
-//});
+//    }
 //}
 //
-//};
+//function mousClick() {
+//    this.style.borderColor = "#12e2a3";
+//    this.style.backgroundColor = "#ddf516";
+//}
+//
+//function mouseOver() {
+//    this.classList.toggle("highlight");
+//}
+//
+//function mouseOut() {
+//    this.classList.toggle("highlight");
+//    this.removeAttribute("style");
+//}
+
+newBox.addEventListener("click", function () {
+    this.style.borderColor = "#12e2a3";
+    this.style.backgroundColor = "#ddf516";
+});
+
+newBox.addEventListener("mouseover", function () {
+    this.classList.toggle("highlight");
+});
+
+newBox.addEventListener("mouseout", function () {
+    this.classList.toggle("highlight");
+    this.removeAttribute("style");
+});
+}
+
+};
