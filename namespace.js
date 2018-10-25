@@ -16,19 +16,40 @@ var MOEPRAB = {
         let boxes = document.getElementById("boxes");
         boxes.appendChild(newBox);
 
-        div.addEventListener("click", function () {
-            div.style.borderColor = "#12e2a3";
-            div.style.backgroundColor = "#ddf516";
-        });
+        newBox.addEventListener("click", mouseClick);
+        newBox.addEventListener("mouseover", mouseOver);
+        newBox.addEventListener("mouseout", mouseOut);
 
-        div.addEventListener("mouseover", function () {
-            div.classList.toggle("highlight");
-        });
-
-        div.addEventListener("mouseout", function () {
-            div.classList.toggle("highlight");
-            div.removeAttribute("style");
-        });
     }
+}
 
-};
+function mousClick() {
+    div.style.borderColor = "#12e2a3";
+    div.style.backgroundColor = "#ddf516";
+}
+
+function mouseOver() {
+    div.classList.toggle("highlight");
+}
+
+function mouseOut() {
+    div.classList.toggle("highlight");
+    div.removeAttribute("style");
+}
+
+//div.addEventListener("click", function () {
+//    div.style.borderColor = "#12e2a3";
+//    div.style.backgroundColor = "#ddf516";
+//});
+//
+//div.addEventListener("mouseover", function () {
+//    div.classList.toggle("highlight");
+//});
+//
+//div.addEventListener("mouseout", function () {
+//    div.classList.toggle("highlight");
+//    div.removeAttribute("style");
+//});
+//}
+//
+//};
