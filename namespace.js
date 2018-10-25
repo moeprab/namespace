@@ -5,8 +5,6 @@ Description: Namespace assignment for MAD9014 class
 Date: October 26, 2018
 *********************************/
 
-
-
 var MOEPRAB = {
 
     init: function () {
@@ -32,4 +30,5 @@ var MOEPRAB = {
             div.removeAttribute("style");
         });
     }
+
 };
