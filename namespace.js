@@ -24,17 +24,17 @@ var MOEPRAB = {
 }
 
 function mousClick() {
-    div.style.borderColor = "#12e2a3";
-    div.style.backgroundColor = "#ddf516";
+    this.style.borderColor = "#12e2a3";
+    this.style.backgroundColor = "#ddf516";
 }
 
 function mouseOver() {
-    div.classList.toggle("highlight");
+    this.classList.toggle("highlight");
 }
 
 function mouseOut() {
-    div.classList.toggle("highlight");
-    div.removeAttribute("style");
+    this.classList.toggle("highlight");
+    this.removeAttribute("style");
 }
 
 //div.addEventListener("click", function () {
